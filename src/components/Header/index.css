@@ -1,0 +1,121 @@
+.nav-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #202020;
+}
+
+.nav-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1110px;
+  padding: 15px 0px 25px 0px;
+  @media screen and (max-width: 767px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.nav-bar-mobile-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.website-logo {
+  width: 90px;
+  margin-top: 12px;
+}
+
+.nav-bar-mobile-icons-container {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-mobile-icon {
+  font-size: 24px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.nav-mobile-button {
+  border: none;
+  padding: 0px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  font-size: 24px;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.nav-bar-large-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1110px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav-large-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
+  list-style-type: none;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-decoration: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.nav-large-item {
+  font-family: 'Roboto';
+  text-decoration: none;
+  margin: 10px;
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+.nav-large-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 10%;
+  color: #ffffff;
+  font-weight: bold;
+  background-color: #4f46e5;
+  font-family: 'Roboto';
+  border-radius: 5px;
+  height: 40px;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
