@@ -70,6 +70,7 @@ class Jobs extends Component {
     this.setState({apiRequestStatus: apiStatus.inProgress})
     const {searchInput, employmentType, salaryRange} = this.state
     const apiUrl = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join()}&minimum_package=${salaryRange}&search=${searchInput}`
+    console.log(apiUrl)
     const jwtToken = Cookies.get('jwt_token')
     const options = {
       headers: {
@@ -116,11 +117,26 @@ class Jobs extends Component {
     this.setState({salaryRange: sal}, this.getAllJobs)
   }
 
-  onChangeEmploymentType = type => {
-    this.setState(
-      prev => ({employmentType: [...prev.employmentType, type]}),
-      this.getAllJobs,
+  onChangeEmploymentType = event => {
+    const {employmentType} = this.state
+    const inputNotInList = employmentType.filter(
+      eachItem => eachItem === event.target.value,
     )
+    console.log(inputNotInList)
+    console.log(employmentType)
+    if (inputNotInList.length === 0) {
+      this.setState(
+        prevState => ({
+          employmentType: [...prevState.employmentType, event.target.value],
+        }),
+        this.getAllJobs,
+      )
+    } else {
+      const updatedData = employmentType.filter(
+        eachItem => eachItem !== event.target.value,
+      )
+      this.setState({employmentType: updatedData}, this.getAllJobs)
+    }
   }
 
   renderLoaderView = () => (

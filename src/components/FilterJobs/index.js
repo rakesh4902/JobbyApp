@@ -51,7 +51,7 @@ const FilterJobs = props => {
       <ul className="employee-list-container">
         {employmentTypesList.map(eachEmployeeType => {
           const onSelectedEmployeeType = event => {
-            onChangeEmploymentType(event.target.value)
+            onChangeEmploymentType(event)
           }
           return (
             <li
